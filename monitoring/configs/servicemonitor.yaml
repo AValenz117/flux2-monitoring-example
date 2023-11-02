@@ -11,9 +11,8 @@ spec:
     matchNames:
       - flux-system
   selector:
-    matchExpressions:
-      - {key: app.kubernetes.io/name, operator: In, values: [weave-gitops]}
-      - {key: app.kubernetes.io/instance, operator: In, values: [ww-gitops]}
+    matchLabels:
+      app: weave-gitops
   endpoints:
   - interval: 15s
     targetPort: 8080
