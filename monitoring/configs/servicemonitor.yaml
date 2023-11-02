@@ -2,7 +2,9 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: weave-gitops-monitor
-  namespace: monitoring
+  labels:
+    app.kubernetes.io/part-of: flux
+    app.kubernetes.io/component: monitoring  
 spec:
   selector:
     matchLabels:
