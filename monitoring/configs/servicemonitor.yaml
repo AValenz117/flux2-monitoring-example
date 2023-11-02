@@ -1,0 +1,12 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: weave-gitops-monitor
+  namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      name: weave-gitops
+  endpoints:
+    - port: 8080
+      path: /metrics
