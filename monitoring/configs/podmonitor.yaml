@@ -20,6 +20,7 @@ spec:
           - notification-controller
           - image-automation-controller
           - image-reflector-controller
+          - weave-gitops
   podMetricsEndpoints:
     - port: http-prom
       relabelings:
@@ -27,3 +28,4 @@ spec:
         - sourceLabels: [__meta_kubernetes_pod_phase]
           action: keep
           regex: Running
+    - port: http-metrics
