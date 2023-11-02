@@ -36,6 +36,8 @@ spec:
       create: true
       passwordHash: $2a$10$827pz4UcqbaZ00tdfyI6FO9nKO9LYr4wuOiJ7dOYw7Z0M716kLCi6
       username: admin
+    labels:
+      app: weave-gitops
     metrics:
       # -- Start the metrics exporter
       enabled: true
