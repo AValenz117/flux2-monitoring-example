@@ -36,11 +36,13 @@ spec:
       passwordHash: $2a$10$827pz4UcqbaZ00tdfyI6FO9nKO9LYr4wuOiJ7dOYw7Z0M716kLCi6
       username: admin
     metrics:
+      # -- Start the metrics exporter
       enabled: true
       service:
-      port: 2112
-      annotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/path: "/metrics"
-        prometheus.io/port: "2112"
-
+        # -- Port to start the metrics exporter on
+        port: 2112
+        # -- Annotations to set on the service
+        annotations:
+          prometheus.io/scrape: "true"
+          prometheus.io/path: "/metrics"
+          prometheus.io/port: "{{ .Values.metrics.service.port }}"
