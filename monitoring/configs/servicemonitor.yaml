@@ -17,13 +17,3 @@ spec:
     - port: metrics
       interval: 15s
       path: /metrics
-      podMetricsEndpoints:
-        - targetPort: metrics
-          selector:
-            matchLabels:
-              app.kubernetes.io/name: weave-gitops
-              app.kubernetes.io/instance: ww-gitops
-          namespaceSelector:
-            matchNames:
-              - flux-system
-          path: /metrics
