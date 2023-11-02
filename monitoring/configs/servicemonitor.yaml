@@ -4,11 +4,26 @@ metadata:
   name: weave-gitops-monitor
   labels:
     app.kubernetes.io/part-of: flux
-    app.kubernetes.io/component: monitoring  
+    app.kubernetes.io/component: monitoring
 spec:
+  namespaceSelector:
+    matchNames:
+      - flux-system
   selector:
-    matchLabels:
-      name: weave-gitops
+    matchExpressions:
+      - {key: app.kubernetes.io/name, operator: In, values: [weave-gitops]}
+      - {key: app.kubernetes.io/instance, operator: In, values: [ww-gitops]}
   endpoints:
-    - port: "8080"
+    - port: metrics
+      interval: 15s
       path: /metrics
+      podMetricsEndpoints:
+        - targetPort: metrics
+          selector:
+            matchLabels:
+              app.kubernetes.io/name: weave-gitops
+              app.kubernetes.io/instance: ww-gitops
+          namespaceSelector:
+            matchNames:
+              - flux-system
+          path: /metrics
