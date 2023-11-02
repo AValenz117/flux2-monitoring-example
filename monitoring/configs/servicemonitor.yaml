@@ -1,5 +1,5 @@
 apiVersion: monitoring.coreos.com/v1
-kind: PodMonitor
+kind: ServiceMonitor
 metadata:
   name: weave-gitops-monitor
   labels:
@@ -13,5 +13,7 @@ spec:
     matchExpressions:
       - {key: app.kubernetes.io/name, operator: In, values: [weave-gitops]}
       - {key: app.kubernetes.io/instance, operator: In, values: [ww-gitops]}
-  podMetricsEndpoints:
-    - port: metrics
+  endpoints:
+  - interval: 15s
+    targetPort: 8080
+    path: /metrics

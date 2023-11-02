@@ -20,7 +20,6 @@ spec:
           - notification-controller
           - image-automation-controller
           - image-reflector-controller
-          - weave-gitops
   podMetricsEndpoints:
     - port: http-prom
       relabelings:
