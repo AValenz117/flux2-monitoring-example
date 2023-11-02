@@ -8,5 +8,5 @@ spec:
     matchLabels:
       name: weave-gitops
   endpoints:
-    - port: 8080
+    - port: "8080"
       path: /metrics
