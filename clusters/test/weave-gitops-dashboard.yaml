@@ -35,6 +35,11 @@ spec:
       create: true
       passwordHash: $2a$10$827pz4UcqbaZ00tdfyI6FO9nKO9LYr4wuOiJ7dOYw7Z0M716kLCi6
       username: admin
+    service:
+      create: true
+      type: ClusterIP
+      port: 9001
+      annotations: {}
     metrics:
       enabled: true
       service:
