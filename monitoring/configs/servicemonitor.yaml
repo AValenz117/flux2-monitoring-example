@@ -15,7 +15,7 @@ spec:
       app: weave-gitops
   endpoints:
   - interval: 15s
-    targetPort: 2112
+    targetPort: 8080
     path: /metrics
   relabelings:
   # https://github.com/prometheus-operator/prometheus-operator/issues/4816
