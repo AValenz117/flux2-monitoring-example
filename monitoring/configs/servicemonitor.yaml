@@ -14,6 +14,6 @@ spec:
     matchLabels:
       app: weave-gitops
   endpoints:
-  - interval: 15s
+  - interval: 5s
     targetPort: 2112
     path: /metrics
