@@ -43,7 +43,7 @@ spec:
       enabled: true
       service:
         # -- Port to start the metrics exporter on
-        port: 8080
+        port: 2112
         # -- Annotations to set on the service
         annotations:
           prometheus.io/scrape: "true"
