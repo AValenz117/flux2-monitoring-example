@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/part-of: flux
     app.kubernetes.io/component: monitoring
-    release: prometheus
+    release: "prometheus"
 spec:
   namespaceSelector:
     matchNames:
