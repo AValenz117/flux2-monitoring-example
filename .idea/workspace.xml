@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="605ec075-3b3c-47ac-87ca-bd6e6adeea56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring/controllers/kube-prometheus-stack/release.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/controllers/kube-prometheus-stack/release.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitoring/controllers/kube-prometheus-stack/repository.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/controllers/kube-prometheus-stack/repository.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
